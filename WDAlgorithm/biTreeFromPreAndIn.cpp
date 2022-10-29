@@ -7,13 +7,10 @@
 //		的根节点，即回到步骤一。
 //		如此重复，直到每颗子树仅有一个节点为止
 //*/
-//struct biTree {
-//	char data;
-//	biTree *lchild;
-//	biTree *rchild;
-//};
+//
 //#include <stdio.h>
 //#include <stdlib.h>
+//#include "biTreeStruct.h"
 //biTree *preInCreate(char *arrIn,char *arrPre,int l1,int h1,int l2,int h2) {
 //	//l1 h1 为中序的第一和最后一个节点下标，l2 h2 为先序的第一和最后一个节点下标
 //	int llen, rlen,i;//左子树、右子树长度
@@ -50,3 +47,9 @@
 //
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

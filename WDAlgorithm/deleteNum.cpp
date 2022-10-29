@@ -3,13 +3,10 @@
 //	分析：
 //		分别设置pre，p，r指针，遍历，符合条件便进行删除。
 //*/
-//struct Link {
-//	int data;
-//	Link *next;
-//};
 //#define _CRT_SECURE_NO_WARNINGS
 //#include <stdio.h>
 //#include <stdlib.h>
+//#include "linkStruct.h"//通过自创建头文件引入结构体，ctrl+鼠标左键点击即可查看
 //void deleteNum(Link *h,int min,int max) {
 //	Link *pre = h, *p = h->next, *r;
 //	while (p) {
@@ -25,18 +22,24 @@
 //		}
 //	}
 //}
-////int main() {
-////	int min, max;
-////	Link*head;
-////	Link *createLink(int);//创建链表的代码我单独封装了一个文件
-////	void printfNowLink(Link*);
-////	head = createLink(0);
-////	printf("请输入要删除的值所在的范围：\n");
-////	printf("min=");
-////	scanf("%d",&min);
-////	printf("max=");
-////	scanf("%d", &max);
-////	deleteNum(head,min,max);
-////	printfNowLink(head);
-////	return 0;
-////}
+//int main() {
+//	int min, max;
+//	Link*head;
+//	Link *createLink(int);//创建链表的代码我单独封装了一个文件
+//	void printfNowLink(Link*);
+//	head = createLink(0);
+//	printf("请输入要删除的值所在的范围：\n");
+//	printf("min=");
+//	scanf("%d",&min);
+//	printf("max=");
+//	scanf("%d", &max);
+//	deleteNum(head,min,max);
+//	printfNowLink(head);
+//	return 0;
+//}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

@@ -6,12 +6,10 @@
 //			因为这两个链表是递增有序的，那么我们可以设置两个指针同步比较，相同则加入c，不同小的那个往后移，直至到链表末尾
 //			这样的时间复杂度为O(n).
 //*/
-//struct Link {
-//	int data;
-//	Link *next;
-//};
 //#include <stdlib.h>
 //#include <stdio.h>
+//#include "linkStruct.h"//通过自创建头文件引入结构体，ctrl+鼠标左键点击即可查看
+//
 //void linkCommon(Link *a, Link *b, Link *c ) {
 //	Link *lc = c,*la=a->next,*lb=b->next,*rc=lc;
 //	while (la) {
@@ -61,3 +59,9 @@
 //	printfNowLink(c);
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

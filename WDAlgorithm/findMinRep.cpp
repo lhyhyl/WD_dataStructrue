@@ -3,12 +3,10 @@
 //	分析：
 //		按照以往的经验，我们需要遍历它，为了保证不断链，我们需要设置pre，p，minPre，min，r等5个指针。
 //*/
-//struct Link {
-//	int data;
-//	Link *next;
-//};
+//
 //#include <stdlib.h>
 //#include <stdio.h>
+//#include "linkStruct.h"//通过自创建头文件引入结构体，ctrl+鼠标左键点击即可查看
 //void inputAndDeleteLink(Link *h) {
 //	Link *pre = h, *minPre = h, *p = h->next, *min = h->next, *r;
 //	while (h->next!=h) {//如果头结点后面还有值，说明未结束
@@ -38,3 +36,9 @@
 //	inputAndDeleteLink(head);
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

@@ -3,13 +3,13 @@
 //	分析：
 //		这种类型就有点像是栈的性质，我们可以利用递归来处理，出口便是尾元素
 //*/
-//struct Link {
-//	int data;
-//	Link* next;
-//};
+
 //#define _CRT_SECURE_NO_WARNINGS
 //#include <stdio.h>
+
 //#include <stdlib.h>
+// #include "linkStruct.h"//通过自创建头文件引入结构体，ctrl+鼠标左键点击即可查看
+
 //void reverseOutput(Link *p) {
 //	if (p == NULL) return;
 //	else {
@@ -27,3 +27,9 @@
 //	reverseOutput(head->next);
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

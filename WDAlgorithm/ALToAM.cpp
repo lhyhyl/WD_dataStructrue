@@ -4,35 +4,10 @@
 //		我们之前也写过邻接矩阵的存储方式，在这里我们就只需要去遍历邻接表中的每一个顶点，
 //		并根据边的信息，将数据填入邻接矩阵中即可
 //*/
-////分别写出邻接表和邻接矩阵两种方式的结构体
-////结构体的构建一定要和创建邻接表、创建邻接矩阵里的一模一样，不然会有问题，把我整惨了
 //#include <stdio.h>
 //#include <stdlib.h>
-//#define MAXSIZE 100
-//#define TYPE int
-//struct AMGraph {
-//	TYPE Vertex[MAXSIZE];//顶点数组
-//	int Edge[MAXSIZE][MAXSIZE];
-//	int numV, numE;//顶点、边数量
-//};//邻接矩阵
-//
-//
-////邻接表存储的图
-//struct EdgeNode {//边表结点
-//	int index;//该边所指向的顶点的位置,在顶点数组里面的位置信息
-//	int weight;//权值
-//	EdgeNode *next;//下一个邻接边
-//};
-//
-//struct VertexNode {//顶点表节点
-//	char info;//顶点信息
-//	EdgeNode *firstEdge;//指向第一条依附该顶点的边的指针
-//};
-//
-//struct ALGraph {
-//	VertexNode adjlist[MAXSIZE];//顶点数组
-//	int numE, numV;//边数、顶点数
-//};
+//#include "ALGraphStruct.h"//通过头文件加载邻接表结构体
+//#include "AMGraphStruct.h"//通过头文件加载邻接矩阵结构体
 //void edgeIput(ALGraph *alG, AMGraph *amG, int index, int *visited) {
 //	visited[index] = 1;//标记为已访问
 //	for (EdgeNode *p = alG->adjlist[index].firstEdge; p; p = p->next) {
@@ -73,3 +48,9 @@
 //	dispGraph(&amG);
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

@@ -3,14 +3,10 @@
 //	分析：
 //		二叉排序树的中序序列是升序序列，我们可以根据这一特性来进行判定
 //*/
-//struct biTree {//树的结构体
-//	char data;
-//	biTree* lchild;
-//	biTree* rchild;
-//};
 //#define _CRT_SECURE_NO_WARNINGS
 //#include <stdio.h>
 //#include <stdlib.h>
+//#include "biTreeStruct.h"//通过头文件加载二叉树结构体
 //
 //bool isSortTree(biTree *T) {
 //	static int min = -32768;//最开始设定min为最小值，确保第一个节点能够进行下去
@@ -29,7 +25,13 @@
 //	//先创建一颗二叉树
 //	biTree* create(biTree*,int);
 //	biTree *T = (biTree *)malloc(sizeof(biTree));
-//	T = create(T,1);
+//	T = create(T,0);
 //	isSortTree(T) ? printf("是二叉排序树") : printf("不是二叉排序树");
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

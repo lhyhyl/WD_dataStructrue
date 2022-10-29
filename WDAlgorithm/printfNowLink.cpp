@@ -10,3 +10,9 @@ void printfNowLink(Link* head) {
 		head = head->next;
 	}
 }
+/*
+
+B’æ£∫±±Ω÷lhy
+≈‰Ã◊ ”∆µ¡¥Ω”£∫
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

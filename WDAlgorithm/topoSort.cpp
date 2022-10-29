@@ -3,31 +3,11 @@
 //			每次将入度为0的顶点输出，输出的同时将出边删除，直至所有顶点输出
 //*/
 //#define _CRT_SECURE_NO_WARNINGS
-//#define MAXSIZE 100
-//struct EdgeNode {//边表结点
-//	int index;//该边所指向的顶点的位置
-//	int weight;//权值
-//	EdgeNode* next;//下一个邻接边
-//};
 //
-//struct VertexNode {//顶点表节点
-//	char info;//顶点信息
-//	EdgeNode* firstEdge;//指向第一条依附该顶点的边的指针
-//};
-//
-//struct ALGraph {
-//	VertexNode adjlist[MAXSIZE];//顶点数组
-//	int numE, numV;//边数、顶点数
-//};
-//struct Stack
-//{
-//	int* arr;	//内存首地址
-//	int  len;	//栈的容量
-//	int top; 	//栈的下标
-//};
 //#include <stdio.h>
 //#include <stdlib.h>
-//
+//#include "ALGraphStruct.h"//通过头文件加载邻接表结构体
+//#include "stackStruct.h"//通过头文件加载栈结构体
 //void inDegree(ALGraph *G,int *indegree) {//统计每个顶点的入度，用数组保存
 //	int k;
 //	for (int i = 0; i < G->numV;i++) {
@@ -85,3 +65,9 @@
 //	topoSort(G);
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

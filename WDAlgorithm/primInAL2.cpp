@@ -5,23 +5,7 @@
 //*/
 //#include <stdio.h>
 //#include <stdlib.h>
-//#define MAXSIZE 100
-//#define TYPE int
-//struct EdgeNode {//边表结点
-//	int index;//该边所指向的顶点的位置
-//	int weight;//权值
-//	EdgeNode *next;//下一个邻接边
-//};
-//
-//struct VertexNode {//顶点表节点
-//	char info;//顶点信息
-//	EdgeNode *firstEdge;//指向第一条依附该顶点的边的指针
-//};
-//
-//struct ALGraph {
-//	VertexNode adjlist[MAXSIZE];//顶点数组
-//	int numE, numV;//边数、顶点数
-//};
+//#include "ALGraphStruct.h"//通过头文件加载邻接表结构体
 //
 //int getWeiFromAtoB(ALGraph *G, int a, int b) {//在图中获取a 到 b的距离（权值）
 //	for (EdgeNode *p = G->adjlist[a].firstEdge; p; p = p->next) {
@@ -94,3 +78,9 @@
 //	primInAL(G, 0);
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

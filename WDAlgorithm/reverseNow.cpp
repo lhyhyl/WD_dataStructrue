@@ -3,13 +3,12 @@
 //	分析：
 //		我们采用头插法进行逆置。
 //*/
-//struct Link {
-//	int data;
-//	Link* next;
-//};
+//
 //#define _CRT_SECURE_NO_WARNINGS
 //#include <stdio.h>
 //#include <stdlib.h>
+// #include "linkStruct.h"//通过自创建头文件引入结构体，ctrl+鼠标左键点击即可查看
+//
 //void reverse(Link *h) {
 //	//Link *pre = h, *p = h->next, *q = h->next,*r;
 //	////pre记录操作节点p上一个节点，q记录第一个节点，之后需要指向NULL,r用于指向每一次操作时p的后一个节点，防止断链
@@ -46,3 +45,9 @@
 //	}
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

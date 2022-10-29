@@ -14,26 +14,12 @@
 
 */
 #define _CRT_SECURE_NO_WARNINGS
-#define MAXSIZE 100
-#define TYPE int
-struct EdgeNode {//边表结点
-	int index;//该边所指向的顶点的位置,在顶点数组里面的位置信息
-	int weight;//权值
-	EdgeNode *next;//下一个邻接边
-};
 
-struct VertexNode {//顶点表节点
-	TYPE info;//顶点信息
-	EdgeNode *firstEdge;//指向第一条依附该顶点的边的指针
-};
 
-struct ALGraph {
-	VertexNode adjlist[MAXSIZE];//顶点数组
-	int numE, numV;//边数、顶点数
-};
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "ALGraphStruct.h"//该头文件存放所有该解决方案里面所需要的结构体，所以不必在功能文件里在书写结构体，同样可以运行，但这里将之前书写的结构体保留，方便大家回忆
 void createGraph(ALGraph *G) {
 	int e, v, vi, vj, w;
 	printf("请输入图的边数与结点数（以空格分开）：");
@@ -142,8 +128,14 @@ void dispGraph(ALGraph *G) {//将图用邻接表的形式展示出来
 }
 //int main() {
 //	ALGraph G;
-//	//createGraphInFile(&G);
-//	createGraph(&G);
+//	createGraphInFile(&G);
+//	//createGraph(&G);
 //	dispGraph(&G);
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

@@ -6,12 +6,9 @@
 //		slow每次走一步，当fast到达链尾时，slow刚好处于链表中间节点，之前我们学过链表逆置，接下来我们把slow后面的节点逆置，
 //		链表就变成了（a1,a2,a3,...,an,an-1,an-2,...）,然后我们从中间开始遍历，依次将节点插入到前面节点后面，即可完成要求
 //*/
-//struct Link {
-//	int data;
-//	Link *next;
-//};
 //#include <stdlib.h>
 //#include <stdio.h>
+//#include "linkStruct.h"//通过自创建头文件引入结构体，ctrl+鼠标左键点击即可查看
 //void crossTheLink(Link *h) {
 //	void reverse(Link *);
 //	Link *fast = h->next, *slow = h->next,*mid;
@@ -53,8 +50,14 @@
 //	printf("交叉后的链表为：");
 //	p = head->next;
 //	while (p) {
-//		printf("%d ", p->type.data);
+//		printf("%d ", p->data);
 //		p = p->next;
 //	}
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

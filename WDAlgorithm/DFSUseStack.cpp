@@ -9,27 +9,8 @@
 //#include <stdio.h>
 //#include <stdlib.h>
 //#define _CRT_SECURE_NO_WARNINGS
-//#define MAXSIZE 100
-//struct Stack {//栈结构
-//	int *arr;
-//	int len;
-//	int top;
-//};
-//struct EdgeNode {//边表结点
-//	int index;//该边所指向的顶点的位置
-//	int weight;//权值
-//	EdgeNode* next;//下一个邻接边
-//};
-//
-//struct VertexNode {//顶点表节点
-//	char info;//顶点信息
-//	EdgeNode* firstEdge;//指向第一条依附该顶点的边的指针
-//};
-//
-//struct ALGraph {
-//	VertexNode adjlist[MAXSIZE];//顶点数组
-//	int numE, numV;//边数、顶点数
-//};
+//#include "ALGraphStruct.h"//通过头文件加载邻接表结构体
+//#include "stackStruct.h"//通过头文件加载栈结构体
 //void DFSUseStack(ALGraph *G, Stack *s) {
 //	bool push(Stack *, int);
 //	bool pop(Stack *);
@@ -74,3 +55,9 @@
 //	DFSUseStack(&G, s);
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

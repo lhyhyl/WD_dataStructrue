@@ -131,6 +131,7 @@
     <ClCompile Include="BalanceTree.cpp" />
     <ClCompile Include="BFS_MIN_Distance.cpp" />
     <ClCompile Include="biBubbleSort.cpp" />
+    <ClCompile Include="biTreeStruct.h" />
     <ClCompile Include="bubbleSort.cpp" />
     <ClCompile Include="DorBFSInAL.cpp" />
     <ClCompile Include="DFSUseStack.cpp" />
@@ -165,7 +166,8 @@
     <ClCompile Include="deletMin.c" />
     <ClCompile Include="delXsub.cpp" />
     <ClCompile Include="divideOddAndEven.cpp" />
-    <ClCompile Include="doubleLoopLinkList.cpp" />
+    <ClCompile Include="AMGraphStruct.h" />
+    <ClCompile Include="isSymmetryInDLink.cpp" />
     <ClCompile Include="doubleNode.cpp" />
     <ClCompile Include="Fibonacci.c" />
     <ClCompile Include="findAllAncestor.cpp" />
@@ -255,6 +257,12 @@
     <ClCompile Include="traverseTree.cpp" />
     <ClCompile Include="TSMatrix.cpp" />
     <ClCompile Include="WPL.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ALGraphStruct.h" />
+    <ClInclude Include="linkStruct.h" />
+    <ClInclude Include="queueStruct.h" />
+    <ClInclude Include="stackStruct.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

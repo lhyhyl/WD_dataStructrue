@@ -2,28 +2,17 @@
 	¸ÃÎÄ¼şÓÃÓÚ´´½¨Ò»¿ÅÁ´±í¶ş²æÊ÷.
 */
 #define _CRT_SECURE_NO_WARNINGS
-//#define TYPE char
-#define TYPE int
-#define TYPEQ biTree*
 #define  N 100
 #define  MAXSIZE 100
-struct biTree {
-	TYPE data;
-	biTree* lchild;
-	biTree* rchild;
-	int ltag, rtag;
-};
-struct Squeue {
-	TYPEQ* arr;
-	int front, rear;
-};
+//#define  SQTYPE biTree*
 #include <stdio.h>
 #include <stdlib.h>
-
+#include "biTreeStruct.h"//Í¨¹ıÍ·ÎÄ¼ş¼ÓÔØ¶ş²æÊ÷½á¹¹Ìå
+#include "queueStruct.h"//Í¨¹ıÍ·ÎÄ¼ş¼ÓÔØ¶ÓÁĞ½á¹¹Ìå
 biTree* create(biTree* T, int type) {//ÕâÀïÎÒÃÇ²ÉÓÃÏÈĞò´´½¨Ò»¿Å¶ş²æÊ÷£¬typeÎª½ÚµãÀàĞÍ£º0´ú±íint 1´ú±íchar
-	TYPE data;
-	printf("ÇëÊäÈëµ±Ç°½ÚµãÖµ£ºdata=");
-	type ? scanf("%rNode", &data) : scanf("%d", &data);
+	BTYPE data;
+	type ? printf("ÇëÊäÈëµ±Ç°½ÚµãÖµ(char)£ºdata="):printf("ÇëÊäÈëµ±Ç°½ÚµãÖµ(int)£ºdata=");
+	type ? scanf("%c", &data) : scanf("%d", &data);
 	getchar();//¶ÁÈ¡¿Õ¸ñ¼ü
 	if (data != '#' && data != -1) {
 		T = (biTree*)malloc(sizeof(biTree));
@@ -37,64 +26,64 @@ biTree* create(biTree* T, int type) {//ÕâÀïÎÒÃÇ²ÉÓÃÏÈĞò´´½¨Ò»¿Å¶ş²æÊ÷£¬typeÎª½Úµ
 	}
 	return T;
 }
-biTree* createInFile() {//´ÓÎÄ¼şÖĞ¶ÁÈ¡¶ş²æÊ÷Êı¾İ£¬×¢£ºÎÄ¼şÊı¾İ´æ´¢Îª Ã¿Ò»ĞĞ ¸ù ×óº¢×Ó ÓÒº¢×Ó
-	FILE* fp;
-	int root, lNode, rNode;//ÈıÕß·Ö±ğ¶ÔÓ¦ÎÄµµÖĞÒ»ĞĞÖĞµÄÖµ£¬¼´¸ùºÍ×óÓÒº¢×Ó
-	biTree* T = (biTree*)malloc(sizeof(biTree));
-	T->lchild = NULL;
-	T->rchild = NULL;
-	Squeue* createQueue(int);
-	bool isEmpty(Squeue * );
-	bool enQueue(Squeue*, TYPEQ, int);
-	bool isEmpty(Squeue*);
-	bool deQueue(Squeue*, TYPEQ*, int);
-	biTree* p = T;//¹¤×÷Ö¸Õë
-	Squeue* sq = createQueue(MAXSIZE);
-	fp = fopen("biTree.txt", "r");//´ò¿ªÎÄ¼ş
-	int flag = 0;//ÅĞ¶ÏÊÇ·ñÊÇµÚÒ»´Î²Ù×÷
-	while (3 == fscanf(fp, "%d %d %d", &root, &lNode, &rNode))
-	{
-		!flag++ ? p->data = root : deQueue(sq, &p, MAXSIZE);//ÀûÓÃflag£¬½ø¶øÅĞ¶ÏÊÇ·ñÊÇ¶ÁÈ¡µÚÒ»ĞĞ£¬ÒòÎª´ËÊ±¶ÓÁĞÎŞÊı¾İ
-		biTree* left = (biTree*)malloc(sizeof(biTree));//´´½¨×óº¢×Ó½ÚµãÖ¸Õë
-		biTree* right = (biTree*)malloc(sizeof(biTree));//´´½¨ÓÒº¢×Ó½ÚµãÖ¸Õë
-		if (lNode) {//Èç¹ûÖµ²»ÎªÁã(0´ú±íÃ»ÓĞº¢×Ó)£¬´´½¨×óº¢×Ó²¢¸³Öµ
-			left->data = lNode;
-			p->lchild = left;//Á¬½Óº¢×Ó
-		}
-		else {//·ñÔòÖ±½Ó½«×óº¢×ÓÖÃÎª¿Õ
-			p->lchild = NULL;
-		}
-		if (rNode) {//Èç¹ûÖµ²»ÎªÁã£¬´´½¨ÓÒº¢×Óº¢×Ó²¢¸³Öµ
-			right->data = rNode;
-			p->rchild = right;
-		}
-		else {//·ñÔòÖ±½Ó½«ÓÒº¢×ÓÖÃÎª¿Õ
-			p->rchild = NULL;
-		}
-		//°Ñ×óÓÒº¢×ÓÈë¶Ó£¬·½±ãÏÂ´Î²Ù×÷
-		if (p->lchild)enQueue(sq, p->lchild, MAXSIZE);//×óº¢×ÓÈë¶Ó
-		if (p->rchild)enQueue(sq, p->rchild, MAXSIZE);//×óº¢×ÓÈë¶Ó
-	}
-	while (!isEmpty(sq)) {//½«Ê£Óà½ÚµãµÄ×óÓÒº¢×ÓÖÃÎª¿Õ
-		deQueue(sq, &p, MAXSIZE);//È¡³ö¶ÓÊ×½Úµã
-		p->lchild = NULL;
-		p->rchild = NULL;
-	}
-	fclose(fp);
-	return T;
-}
+//biTree* createInFile() {//´ÓÎÄ¼şÖĞ¶ÁÈ¡¶ş²æÊ÷Êı¾İ£¬×¢£ºÎÄ¼şÊı¾İ´æ´¢Îª Ã¿Ò»ĞĞ ¸ù ×óº¢×Ó ÓÒº¢×Ó
+//	FILE* fp;
+//	int root, lNode, rNode;//ÈıÕß·Ö±ğ¶ÔÓ¦ÎÄµµÖĞÒ»ĞĞÖĞµÄÖµ£¬¼´¸ùºÍ×óÓÒº¢×Ó
+//	biTree* T = (biTree*)malloc(sizeof(biTree));
+//	T->lchild = NULL;
+//	T->rchild = NULL;
+//	Squeue* createQueue(int);
+//	bool isEmpty(Squeue * );
+//	bool enQueue(Squeue*, biTree*, int);
+//	bool isEmpty(Squeue*);
+//	bool deQueue(Squeue*, biTree**, int);
+//	biTree* p = T;//¹¤×÷Ö¸Õë
+//	Squeue* sq = createQueue(MAXSIZE);
+//	fp = fopen("biTree.txt", "r");//´ò¿ªÎÄ¼ş
+//	int flag = 0;//ÅĞ¶ÏÊÇ·ñÊÇµÚÒ»´Î²Ù×÷
+//	while (3 == fscanf(fp, "%d %d %d", &root, &lNode, &rNode))
+//	{
+//		!flag++ ? p->data = root : deQueue(sq, &p, MAXSIZE);//ÀûÓÃflag£¬½ø¶øÅĞ¶ÏÊÇ·ñÊÇ¶ÁÈ¡µÚÒ»ĞĞ£¬ÒòÎª´ËÊ±¶ÓÁĞÎŞÊı¾İ
+//		biTree* left = (biTree*)malloc(sizeof(biTree));//´´½¨×óº¢×Ó½ÚµãÖ¸Õë
+//		biTree* right = (biTree*)malloc(sizeof(biTree));//´´½¨ÓÒº¢×Ó½ÚµãÖ¸Õë
+//		if (lNode) {//Èç¹ûÖµ²»ÎªÁã(0´ú±íÃ»ÓĞº¢×Ó)£¬´´½¨×óº¢×Ó²¢¸³Öµ
+//			left->data = lNode;
+//			p->lchild = left;//Á¬½Óº¢×Ó
+//		}
+//		else {//·ñÔòÖ±½Ó½«×óº¢×ÓÖÃÎª¿Õ
+//			p->lchild = NULL;
+//		}
+//		if (rNode) {//Èç¹ûÖµ²»ÎªÁã£¬´´½¨ÓÒº¢×Óº¢×Ó²¢¸³Öµ
+//			right->data = rNode;
+//			p->rchild = right;
+//		}
+//		else {//·ñÔòÖ±½Ó½«ÓÒº¢×ÓÖÃÎª¿Õ
+//			p->rchild = NULL;
+//		}
+//		//°Ñ×óÓÒº¢×ÓÈë¶Ó£¬·½±ãÏÂ´Î²Ù×÷
+//		if (p->lchild)enQueue(sq, p->lchild, MAXSIZE);//×óº¢×ÓÈë¶Ó
+//		if (p->rchild)enQueue(sq, p->rchild, MAXSIZE);//×óº¢×ÓÈë¶Ó
+//	}
+//	while (!isEmpty(sq)) {//½«Ê£Óà½ÚµãµÄ×óÓÒº¢×ÓÖÃÎª¿Õ
+//		deQueue(sq, &p, MAXSIZE);//È¡³ö¶ÓÊ×½Úµã
+//		p->lchild = NULL;
+//		p->rchild = NULL;
+//	}
+//	fclose(fp);
+//	return T;
+//}
 //ÖĞĞòµİ¹é±éÀú
 void inOrder(biTree* T) {
 	if (T != NULL) {
 		inOrder(T->lchild);
-		printf("%d ", T->data);
+		sizeof(BTYPE)==1?printf("%c ", T->data):printf("%d ",T->data);
 		inOrder(T->rchild);
 	}
 }
 //ÏÈĞòµİ¹é±éÀú
 void preOrder(biTree* T) {
 	if (T != NULL) {
-		printf("%d ", T->data);
+		sizeof(BTYPE) == 1 ? printf("%c ", T->data) : printf("%d ", T->data);
 		preOrder(T->lchild);
 		preOrder(T->rchild);
 	}
@@ -104,7 +93,7 @@ void postOrder(biTree* T) {
 	if (T != NULL) {
 		postOrder(T->lchild);
 		postOrder(T->rchild);
-		printf("%d ", T->data);
+		sizeof(BTYPE) == 1 ? printf("%c ", T->data) : printf("%d ", T->data);
 	}
 }
 //Í³¼Æ½Úµã¸öÊı
@@ -121,3 +110,9 @@ void nodeNum(biTree* T, int* num) {
 //	preOrder(T);
 //	return 0;
 //}
+/*
+
+BÕ¾£º±±½Ölhy
+ÅäÌ×ÊÓÆµÁ´½Ó£º
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

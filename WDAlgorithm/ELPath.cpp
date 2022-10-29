@@ -3,16 +3,11 @@
 //	判断是否存在EL路径
 //*/
 //
-//#define MAXSIZE 100
 //#include <stdio.h>
 //#include <stdlib.h>
-//struct AMGraph{
-//	int Vertex[MAXSIZE];
-//	int Edge[MAXSIZE][MAXSIZE];
-//	int numV, numE;//顶点、边数量
-//};
+//#include "AMGraphStruct.h"//通过头文件加载邻接矩阵结构体
 //
-//int judgeEL(Graph* g) {
+//int judgeEL(AMGraph* g) {
 //	int degree, i, j, count = 0;
 //	for (i = 0; i < g->numV; i++) {
 //		degree = 0;
@@ -35,3 +30,9 @@
 //	judgeEL(G) ? printf("存在EL路径") : printf("不存在EL路径");
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

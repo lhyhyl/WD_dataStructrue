@@ -5,24 +5,9 @@
 //		用来存储vi到vj的路径数据，方便我们之后打印输出。我们这里仍然采用深度优先遍历，广度优先遍历不适合。
 //*/
 //#define _CRT_SECURE_NO_WARNINGS
-//#define MAXSIZE 100
 //#include <stdio.h>
 //#include <stdlib.h>
-//struct EdgeNode {//边表结点
-//	int index;//该边所指向的顶点的位置
-//	int weight;//权值
-//	EdgeNode* next;//下一个邻接边
-//};
-//
-//struct VertexNode {//顶点表节点
-//	char info;//顶点信息
-//	EdgeNode* firstEdge;//指向第一条依附该顶点的边的指针
-//};
-//
-//struct ALGraph {
-//	VertexNode adjlist[MAXSIZE];//顶点数组
-//	int numE, numV;//边数、顶点数
-//};
+// #include "ALGraphStruct.h"//通过头文件加载邻接表结构体
 //
 //void print(ALGraph *G, int *path,int d) {
 //	for (int i = 0; i <= d; i++)
@@ -33,10 +18,11 @@
 //	EdgeNode *p;
 //	d++;
 //	path[d] = vi;
-//	visited[vi] = 1;
 //	if (vi == vj) {
 //		print(G, path,d);
+//		return;//因为只需要简单路径，找到则返回
 //	}
+//	visited[vi] = 1;
 //	for (p = G->adjlist[vi].firstEdge; p;p=p->next) {
 //		if (!visited[p->index]) {
 //			findRoute(G,p->index,vj,path,visited,d);
@@ -72,3 +58,9 @@
 //	findRoute(G, vi - 1, vj - 1, path, visited, -1);
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

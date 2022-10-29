@@ -6,17 +6,10 @@
 		表示，初始时除自身节点外均表示为无穷。另外我们还需要一个一维数组用来存储我们的顶点个数
 */
 #define _CRT_SECURE_NO_WARNINGS
-#define MAXSIZE 100 //数组最大值
-#define TYPE int
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-struct AMGraph {
-	TYPE Vertex[MAXSIZE];
-	int Edge[MAXSIZE][MAXSIZE];
-	int numV, numE;//顶点、边数量
-};
-
+#include "AMGraphStruct.h"
 void createGraph(AMGraph *G) {
 	int v, e, vi, vj, w;
 	printf("请输入创建的图的顶点与边个数（以空格分开）：");
@@ -51,13 +44,14 @@ void createGraphFromFile(AMGraph* G) {
 	char arc[16] = { 0 };//边信息
 	char* vertex;//顶点信息，名称
 	//fp = fopen("primTest.txt", "r");//打开文件
-	fp = fopen("dijkstra.txt", "r");//打开文件
+	//fp = fopen("dijkstra.txt", "r");//打开文件
+	fp = fopen("floyd.txt", "r");//打开文件
 	if (fp == NULL) {
 		printf("该文件无法打开！");
 		return;
 	}
 	fscanf(fp, "%hu %hu", numE, numV);//读取第一行
-	G->numE = numE[0];
+ 	G->numE = numE[0];
 	G->numV = numV[0];
 
 	//初始化图  
@@ -85,12 +79,13 @@ void createGraphFromFile(AMGraph* G) {
 		else {//开始依次存储边信息
 			fgets(arc, 16, fp);//读取该行的边信息
 			if(arc[0] == 10) fgets(arc, 16, fp);//如果是"/n"，则取出下一行
+			arc[strlen(arc) - 1] = ' ';
 			char* start = strtok(arc, " ");
 			char* end = NULL, * weight = NULL;
 			if (start) end = strtok(NULL, " ");
 			if (end) weight = strtok(NULL, " ");
-			weight[strlen(weight) - 1] = ' ';
-			weight = strtok(weight," ");
+			//weight[strlen(weight) - 1] = ' ';
+			//weight = strtok(weight," ");
 			G->Edge[atoi(start) - 1][atoi(end)- 1] = atoi(weight);
 			//G->Edge[atoi(end) - 1][atoi(start) - 1] = atoi(weight);
 		}
@@ -132,3 +127,9 @@ void dispGraph(AMGraph *G) {
 //	createGraphFromFile(&G);
 //	dispGraph(&G);
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

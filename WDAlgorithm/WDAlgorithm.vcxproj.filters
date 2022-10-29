@@ -117,7 +117,7 @@
     <ClCompile Include="subList.cpp">
       <Filter>源文件\linkList</Filter>
     </ClCompile>
-    <ClCompile Include="doubleLoopLinkList.cpp">
+    <ClCompile Include="isSymmetryInDLink.cpp">
       <Filter>源文件\linkList</Filter>
     </ClCompile>
     <ClCompile Include="createDouLoopLink.cpp">
@@ -423,5 +423,25 @@
     <ClCompile Include="BalanceTree.cpp">
       <Filter>源文件\tree</Filter>
     </ClCompile>
+    <ClCompile Include="biTreeStruct.h">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AMGraphStruct.h">
+      <Filter>头文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="linkStruct.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="queueStruct.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stackStruct.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ALGraphStruct.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

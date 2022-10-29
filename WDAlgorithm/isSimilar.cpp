@@ -4,13 +4,9 @@
 //	分析：
 //		典型的要采取递归来处理
 //*/
-//struct biTree {
-//	char data;
-//	biTree *lchild;
-//	biTree *rchild;
-//};
 //#include <stdlib.h>
 //#include <stdio.h>
+// #include "biTreeStruct.h"//通过头文件加载二叉树结构体
 //bool isSimilar(biTree *T1, biTree *T2) {
 //	if (!T1 && !T2) {//T1,T2都是空的二叉树
 //		return true;
@@ -41,3 +37,9 @@
 //	isSimilar(T1, T2) ? printf("相似") : printf("不相似");
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

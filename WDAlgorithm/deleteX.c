@@ -25,3 +25,9 @@
 //	deleteX(arr,2,len);//要删除的元素也可以有用户输入
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

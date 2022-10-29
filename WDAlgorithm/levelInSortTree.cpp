@@ -3,16 +3,10 @@
 //	分析：
 //		我们可以根据二叉排序树的性质，从根节点一直向下查找，每查找一次，层次便加一
 //*/
-// struct biTree {//树的结构体
-//	 char data;
-//	 biTree* lchild;
-//	 biTree* rchild;
-// };
 //#define _CRT_SECURE_NO_WARNINGS
 //#include <stdio.h>
 //#include <stdlib.h>
-//
-//
+//#include "biTreeStruct.h"//通过头文件加载二叉树结构体
 //void findLevel(biTree *T, int p,int &depth) {
 //	if (T) {
 //		if (T->data < p) {
@@ -35,3 +29,9 @@
 //	printf("该节点所在的层次为第%d层",depth);
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

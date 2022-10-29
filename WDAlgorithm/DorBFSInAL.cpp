@@ -10,31 +10,11 @@
 //*/
 ////创建邻接表图结构  分为边表节点结构 顶点表节点结构 图结构
 //
-//#define MAXSIZE 100
-//#define TYPE int
-////边表结构 
-//struct EdgeNode {//边表结点
-//	int index;//该边所指向的顶点的位置,在顶点数组里面的位置信息
-//	int weight;//权值
-//	EdgeNode* next;//下一个邻接边
-//};
 //
-//struct VertexNode {//顶点表节点
-//	int info;//顶点信息
-//	EdgeNode* firstEdge;//指向第一条依附该顶点的边的指针
-//};
-//
-//struct ALGraph {
-//	VertexNode adjlist[MAXSIZE];//顶点数组
-//	int numE, numV;//边数、顶点数
-//};
-////队列结构(我们采用顺序队列)
-//struct Squeue {
-//	TYPE* arr;
-//	int front, rear;
-//};
 //#include <stdio.h>
 //#include <stdlib.h>
+//#include "ALGraphStruct.h"//通过头文件加载邻接表结构体
+//#include "queueStruct.h"//通过头文件加载队列结构体
 //void BFSBegin(ALGraph* G) {
 //	void BFS(ALGraph*, int*, int);
 //	int* visited = (int*)malloc(sizeof(int) * G->numV);//设置标记数组
@@ -51,15 +31,15 @@
 //	//声明有关队列的函数
 //	Squeue* createQueue(int);
 //	bool isEmpty(Squeue*);
-//	bool enQueue(Squeue*, TYPE, int);
-//	bool deQueue(Squeue*, TYPE*, int);
+//	bool enQueue(Squeue*, int, int);
+//	bool deQueue(Squeue*, int*, int);
 //	Squeue* sq;
 //	sq = createQueue(G->numV);//创建队列
 //	printf("%c ", G->adjlist[v].info);//访问传进来的顶点
 //	enQueue(sq, v, G->numV);//入队
 //	visited[v] = 1;//置为已访问
 //	while (!isEmpty(sq)) {//队列不空，取出队首元素，进行访问
-//		TYPE top;
+//		int top;
 //		deQueue(sq, &top, G->numV);
 //		for (EdgeNode* w = G->adjlist[top].firstEdge; w; w = w->next) {//依次将当前节点的边表入队，和层次遍历一致
 //			if (!visited[w->index]) {
@@ -111,3 +91,9 @@
 //	DFSBegin(graph);
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

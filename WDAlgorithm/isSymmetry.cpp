@@ -7,24 +7,17 @@
 //		之前我们就用过这种方法，用以找到中间节点，之后将slow节点之后的节点依次入栈，
 //		fast指针重新指向首节点，然后fast和栈内元素一一比较，若存在不同，则不对称。
 //*/
-//struct Link {
-//	char letter;
-//	Link *next;
-//};
-//struct Stack {
-//	char *arr;
-//	int len;
-//	int top;
-//};
 //#define _CRT_SECURE_NO_WARNINGS
 //#include <stdio.h>
+//#include "linkStruct.h"//通过自创建头文件引入结构体，ctrl+鼠标左键点击即可查看
+//#include "stackStruct.h"//通过头文件加载栈结构体
 //void isSymmetry(Link *h) {
 //	int size;
 //	struct Stack *s;
 //	Stack *createStack(int);
-//	bool push(Stack *,char);
+//	bool push(Stack * , char);
 //	bool empty(Stack *);
-//	char *top(Stack *);
+//	char top(Stack *);
 //	bool pop(Stack *);
 //	void destory(Stack *);
 //	printf("请输入要创建的栈的大小：size=");
@@ -37,11 +30,11 @@
 //	}
 //	fast = h->next;
 //	while (slow->next) {//将中间元素的后面节点依次入栈
-//		push(s,slow->next->letter);
+//		push(s,slow->next->data);
 //		slow = slow->next;//我总是忘记往下走
 //	}
 //	while (!empty(s)) {
-//		if (fast->letter != *top(s) ) {
+//		if (fast->data != top(s) ) {
 //			printf("该链表非中心对称");
 //			break;
 //		}
@@ -58,3 +51,9 @@
 //	isSymmetry(head);
 //	return 0;
 //} 
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

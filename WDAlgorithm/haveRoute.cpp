@@ -5,33 +5,10 @@
 //		采用广度优先：同样从vi顶点开始进行广度遍历，若存在则必然可以走到vj顶点处。
 //*/
 //#define _CRT_SECURE_NO_WARNINGS
-//#define MAXSIZE 100
 //#include <stdio.h>
 //#include <stdlib.h>
-//struct EdgeNode {//边表结点
-//	int index;//该边所指向的顶点的位置
-//	int weight;//权值
-//	EdgeNode* next;//下一个邻接边
-//};
-//
-//struct VertexNode {//顶点表节点
-//	char info;//顶点信息
-//	EdgeNode* firstEdge;//指向第一条依附该顶点的边的指针
-//};
-//
-//struct ALGraph {
-//	VertexNode adjlist[MAXSIZE];//顶点数组
-//	int numE, numV;//边数、顶点数
-//};
-////链队
-//struct Link {
-//	int node;//我们进行广度优先时会用到，将顶点序号入队
-//	Link *next;
-//};
-//struct LinkQueue {
-//	Link *front, *rear;
-//};
-//
+//#include "queueStruct.h"//通过头文件加载队列结构体
+//#include "ALGraphStruct.h"//通过头文件加载邻接表结构体
 //void DFS(ALGraph *G, int vi, int vj, int *visited, int &flag) {
 //	for (EdgeNode *p = G->adjlist[vi].firstEdge; p; p = p->next) {
 //		if (!visited[p->index]) {
@@ -126,3 +103,9 @@
 //	}
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

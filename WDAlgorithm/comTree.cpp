@@ -4,17 +4,11 @@
 //		我们仍然可以借助队列来完成这件事，具体做法为：我们依次将二叉树从上到下，从左到右入栈，包括空节点，如遇空节点，
 //		若队列非空，则判断其后是否还存在节点，若有，则该树为非完全二叉树。
 //*/
-//struct biTree {
-//	char data;
-//	biTree *lchild;
-//	biTree *rchild;
-//};
-//struct Squeue {
-//	biTree data;
-//	int front, rear;
-//};
+//
 //#include <stdio.h>
 //#include <stdlib.h>
+//#include "biTreeStruct.h"//通过头文件加载二叉树结构体
+//#include "queueStruct.h"//通过头文件加载队列结构体
 //bool isComplete(biTree *T, Squeue *sq, int maxSize) {
 //	if (!T)return true;
 //	bool enQueue(Squeue *, biTree *, int maxSize);
@@ -60,3 +54,9 @@
 //	isCom ? printf("该二叉树是完全二叉树") : printf("该二叉树不是完全二叉树");
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

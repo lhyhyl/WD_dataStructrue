@@ -3,14 +3,10 @@
 //			我们会设置一个dist数组和path数组，dist数组用于描述i到j的权值，
 //			path数组用于描述i到j经过那个顶点
 //*/
-//#define MAXSIZE 100
 //#include <stdio.h>
 //#include <stdlib.h>
-//struct AMGraph {
-//	int Vertex[MAXSIZE];
-//	int Edge[MAXSIZE][MAXSIZE];
-//	int numV, numE;//顶点、边数量
-//};
+//#include "AMGraphStruct.h"//通过头文件加载邻接矩阵结构体
+//
 //void floyd(AMGraph *G,int path[][MAXSIZE]) {
 //	int i, j, k;
 //	int dist[MAXSIZE][MAXSIZE];
@@ -55,6 +51,12 @@
 //	dispGraph(G);
 //	int path[MAXSIZE][MAXSIZE];
 //	floyd(G,path);
-//	printPath(path,1,3);
+//	printPath(path,0,2);//输入是起点与终点，具体要看你的图是不是从0开始的
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

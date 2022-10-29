@@ -3,18 +3,10 @@
 //	分析：
 //		和中序遍历大同小异，唯一的差别在于每次先访问节点，在判断有没有左孩子，有则入栈，然后出栈，往右走。直至栈空。
 //*/
-//struct biTree {//树的结构体
-//	char data;
-//	biTree *lchild;
-//	biTree *rchild;
-//};
-//struct Stack {//栈的结构体
-//	char* arr;	//内存首地址
-//	int  len;	//栈的容量
-//	int top; 	//栈的下标
-//};
 //#include <stdio.h>
 //#include <stdlib.h>
+//#include "biTreeStruct.h"//通过头文件加载二叉树结构体
+//#include "stackStruct.h"//通过头文件加载栈结构体
 //void preOrder(biTree *T, Stack *s) {//先序遍历
 //	biTree *p = T;
 //	bool empty(Stack *);
@@ -38,7 +30,7 @@
 //	int count = 0;
 //	biTree *T = (biTree *)malloc(sizeof(biTree));
 //	Stack *s = (Stack*)malloc(sizeof(Stack));
-//	biTree *create(biTree*);
+//	biTree *create(biTree*,int);
 //	void nodeNum(biTree *, int *);
 //	Stack *createStack(int);
 //
@@ -50,4 +42,9 @@
 //	preOrder(T, s);
 //	return 0;
 //}
-////一名谦虚的学生
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

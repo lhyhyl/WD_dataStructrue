@@ -3,14 +3,10 @@
 //	分析：
 //		很简单，每遍历一个节点，计数器便加一，直至等于k
 //*/
-//struct biTree {
-//	char data;
-//	biTree *lchild;
-//	biTree *rchild;
-//};
 //#define _CRT_SECURE_NO_WARNINGS
 //#include <stdio.h>
 //#include <stdlib.h>
+//#include "biTreeStruct.h"//通过头文件加载二叉树结构体
 //biTree *preK(biTree *T, int k) {
 //	static int num = 0;
 //	static biTree *r;
@@ -53,3 +49,9 @@
 //
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

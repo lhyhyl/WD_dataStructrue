@@ -5,16 +5,10 @@
 //				目前到达各顶点的距离，此外我们还需要一个前置顶点数组prevs，用于存储路径
 //
 //*/
-//#define MAXSIZE 100 //数组最大值
 //#define _CRT_SECURE_NO_WARNINGS
 //#include <stdio.h>
 //#include <stdlib.h>
-//struct AMGraph {
-//	int Vertex[MAXSIZE];
-//	int Edge[MAXSIZE][MAXSIZE];
-//	int numV, numE;//顶点、边数量
-//};
-//
+//#include "AMGraphStruct.h"//通过头文件加载邻接矩阵结构体
 //void dijkstra(AMGraph *G, int start) {
 //	int flag[MAXSIZE];//标记数组
 //	int dist[MAXSIZE];//可到达顶点的距离数据
@@ -61,3 +55,9 @@
 //	dijkstra(G, 0);
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https ://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

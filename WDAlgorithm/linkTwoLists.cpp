@@ -4,12 +4,10 @@
 //		首先我们要找到h1的尾结点，找到尾结点后将尾结点的next指向h2的首节点，然后找到h2的尾结点，将其next指针指向h1，
 //		就大功告成了。
 //*/
-//struct Link {
-//	int data;
-//	Link *next;
-//};
+//
 //#include <stdlib.h>
 //#include <stdio.h>
+// #include "linkStruct.h"//通过自创建头文件引入结构体，ctrl+鼠标左键点击即可查看
 //void linkTwoLists(Link *h1,Link *h2) {
 //	Link *p1 = h1->next, *p2 = h2->next;
 //	while (p1->next != h1) p1 = p1->next;//这里要去判断p1->next是否等于h1，进而判断出是否到达尾结点
@@ -31,3 +29,9 @@
 //	}
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

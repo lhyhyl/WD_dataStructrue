@@ -3,23 +3,13 @@
 */
 #include <stdio.h>
 #include <stdlib.h>
-//#define TYPE biTree* 
-//#define TYPE char
-#define TYPE int
+#include "queueStruct.h"
+#include "biTreeStruct.h"
 
-struct biTree {
-	char data;
-	biTree *lchild;
-	biTree *rchild;
-};
-struct Squeue {
-	TYPE *arr;
-	int front, rear;
-};
 //创建队列
 Squeue *createQueue(int n) {
 	Squeue *sq = ( Squeue *)malloc(sizeof( Squeue));
-	sq->arr = (TYPE *)malloc(sizeof(TYPE)*n);//数组大小
+	sq->arr = (SQTYPE *)malloc(sizeof(SQTYPE)*n);//数组大小
 	sq->front = 0;
 	sq->rear = 0;
 	return sq;
@@ -37,7 +27,7 @@ int count(Squeue *sq, int maxSize) {
 	return (sq->rear - sq->front + maxSize) % maxSize;
 }
 //入队
-bool enQueue(Squeue *sq, TYPE data, int maxSize) {
+bool enQueue(Squeue *sq, SQTYPE data, int maxSize) {
 	if (isFull(sq, maxSize)) return false;
 	sq->arr[sq->rear] = data;
 	sq->rear = (sq->rear + 1) % maxSize;
@@ -45,7 +35,7 @@ bool enQueue(Squeue *sq, TYPE data, int maxSize) {
 }
 
 //出队
-bool deQueue(Squeue *sq, TYPE *data,int maxSize) {
+bool deQueue(Squeue *sq, SQTYPE *data,int maxSize) {
 	if (isEmpty(sq)) return false;
 	*data = sq->arr[sq->front];
 	sq->front = (sq->front + 1) % maxSize;
@@ -53,11 +43,17 @@ bool deQueue(Squeue *sq, TYPE *data,int maxSize) {
 }
 
 //打印队列中元素
-//void printQ(Squeue *sq,int maxSize) {
-//	if (isEmpty(sq)) return ;
-//	int np = sq->front;
-//	while (np!=sq->rear) {
-//		printf("%d ",sq->arr[np]);
-//		np = (np + 1) % maxSize;
-//	}
-//}
+void printQ(Squeue *sq,int maxSize) {
+	if (isEmpty(sq)) return ;
+	int np = sq->front;
+	while (np!=sq->rear) {
+		printf("%d ",sq->arr[np]);
+		np = (np + 1) % maxSize;
+	}
+}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

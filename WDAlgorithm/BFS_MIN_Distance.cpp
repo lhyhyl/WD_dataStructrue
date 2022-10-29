@@ -5,36 +5,16 @@
 //			求得某顶点到其他顶点的距离
 //*/
 //#define _CRT_SECURE_NO_WARNINGS
-//#define MAXSIZE 100
-//#define TYPE int
-//struct EdgeNode {//边表结点
-//	int index;//该边所指向的顶点的位置,在顶点数组里面的位置信息
-//	int weight;//权值
-//	EdgeNode* next;//下一个邻接边
-//};
 //
-//struct VertexNode {//顶点表节点
-//	TYPE info;//顶点信息
-//	EdgeNode* firstEdge;//指向第一条依附该顶点的边的指针
-//};
-//
-//struct ALGraph {
-//	VertexNode adjlist[MAXSIZE];//顶点数组
-//	int numE, numV;//边数、顶点数
-//};
-////队列结构(我们采用顺序队列)
-//struct Squeue {
-//	TYPE *arr;
-//	int front, rear;
-//};
 //#include <stdio.h>
 //#include <stdlib.h>
-//
+//#include "ALGraphStruct.h"//通过头文件加载邻接表结构体
+//#include "queueStruct.h"//通过头文件加载队列结构体
 //void BFS_MIN_Distance(ALGraph *G, int v) {
 //	Squeue *createQueue(int);
 //	bool isEmpty(Squeue *);
-//	bool enQueue(Squeue *, TYPE, int);
-//	bool deQueue(Squeue *sq, TYPE *data, int maxSize);
+//	bool enQueue(Squeue *, int, int);
+//	bool deQueue(Squeue *sq, int *data, int maxSize);
 //	Squeue *sq;
 //	sq = createQueue(G->numV);//创建队列
 //	int *d = (int *)malloc(sizeof(int)*G->numV);
@@ -74,3 +54,9 @@
 //	BFS_MIN_Distance(graph, 0);
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

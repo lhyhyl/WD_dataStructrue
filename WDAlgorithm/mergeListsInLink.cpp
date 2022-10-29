@@ -4,11 +4,9 @@
 //	分析：
 //		因为链表递增，所以我们可以采用头插法进行处理，以a链为起始链，进行归并
 //*/
-//struct Link {
-//	int data;
-//	Link *next;
-//};
+//
 //#include <stdio.h>
+//#include "linkStruct.h"//通过自创建头文件引入结构体，ctrl+鼠标左键点击即可查看
 //
 //void merge(Link *ha,Link *hb) {
 //	Link *l = ha, *pa = ha->next, *pb = hb->next, *ra, *rb;
@@ -50,3 +48,9 @@
 //	printfNowLink(ha);
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

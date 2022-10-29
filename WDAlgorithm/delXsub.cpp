@@ -3,14 +3,11 @@
 //	分析：
 //		因为我们要删除以寻找到的元素为根的子树，所以我们删除时应采用递归后序遍历进行删除释放，寻找x采用先序遍历
 //*/
-//struct biTree {
-//	char data;
-//	biTree *lchild;
-//	biTree *rchild;
-//};
 //#define _CRT_SECURE_NO_WARNINGS
 //#include <stdio.h>
 //#include <stdlib.h>
+//#include "biTreeStruct.h"//通过头文件加载二叉树结构体
+//
 //void del(biTree *T) {//释放结点函数
 //	if (T) {
 //		if (T->lchild)del(T->lchild);
@@ -40,7 +37,7 @@
 //	biTree *create(biTree *,int);
 //	void inOrder(biTree *);
 //	T = create(T,1);//创建一颗二叉树
-//	printf("请输入要寻找的x值：x=");
+//	printf("请输入要删除的x值：x=");
 //	scanf("%c", &x);
 //	if (T->data == x) {
 //		del(T);
@@ -51,3 +48,9 @@
 //	inOrder(T);
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

@@ -5,20 +5,18 @@
 //		我们对每一个节点进行判断，如果左右子树均平衡且左右子树高度差小于等于1，则该节点平衡
 //
 //*/
-//struct biTree {
-//	int data;
-//	biTree*left, *right;
-//};
+//
 //#define _CRT_SECURE_NO_WARNINGS
 //#include <stdio.h>
 //#include <stdlib.h>
+//#include "biTreeStruct.h"//通过头文件加载二叉树结构体
 //bool isAVL(biTree*T, int *depth) {
 //	if (!T) {//空节点，为平衡二叉树
 //		*depth = 0;
 //		return true;
 //	}
 //	int left = 0, right = 0;
-//	if (isAVL(T->left, &left) && isAVL(T->right, &right)) {//判断左右子树是否为平衡二叉树
+//	if (isAVL(T->lchild, &left) && isAVL(T->rchild, &right)) {//判断左右子树是否为平衡二叉树
 //		int diff = left - right;//左右子树的高度差
 //		if (abs(diff) <= 1) {//满足小于等于1,那就是平衡二叉树
 //			*depth	= (1 + (left > right ? left : right));
@@ -35,3 +33,9 @@
 //	isAVL(T, &depth) ? printf("是二叉平衡树"):printf("不是二叉平衡树");
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

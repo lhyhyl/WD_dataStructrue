@@ -8,16 +8,10 @@
 //
 //
 //*/
-//struct biTree {//树的结构体
-//	char data;
-//	biTree *lchild;
-//	biTree *rchild;
-//};
-//struct Stack {//栈的结构体
-//
-//};
 //#include <stdio.h>
 //#include <stdlib.h>
+//#include "biTreeStruct.h"//通过头文件加载二叉树结构体
+//#include "stackStruct.h"//通过头文件加载栈结构体
 //void postOrder(biTree *T, Stack *s) {//后序遍历
 //	biTree *p = T;
 //	biTree *r = (biTree*)malloc(sizeof(biTree));
@@ -61,3 +55,9 @@
 //	postOrder(T, s);
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

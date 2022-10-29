@@ -4,14 +4,11 @@
 //		二叉排序树的特点就是，根节点的值比左子树大，比右子树小。我们可以每次访问一个节点时，分别找到其左子树的最大值，右子树的
 //		最小值，如果小于左子树最大值，大于右子树最小值，则可判断该树不是二叉排序树。
 //*/
-// struct biTree {//树的结构体
-//	 char data;
-//	 biTree* lchild;
-//	 biTree* rchild;
-// };
+//
 //#define _CRT_SECURE_NO_WARNINGS
 //#include <stdio.h>
 //#include <stdlib.h>
+// #include "biTreeStruct.h"//通过头文件加载二叉树结构体
 //int getMax(biTree *T) {
 //	if (T) {
 //		static int max = T->data;
@@ -61,3 +58,9 @@
 //	isSort(T) ? printf("是二叉排序树"): printf("不是二叉排序树");
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

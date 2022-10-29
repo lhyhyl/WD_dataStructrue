@@ -1,16 +1,14 @@
-/*
-	有一个带头结点的单链表L，设计一个算法使其递增有序
-	分析：
-		我们可以采用冒泡排序对其操作，使其递增有序,时间复杂度为O(n^2)。
-*/
-
-//struct Link {
-//	int data;
-//	Link *next;
-//};
+///*
+//	有一个带头结点的单链表L，设计一个算法使其递增有序
+//	分析：
+//		我们可以采用冒泡排序对其操作，使其递增有序,时间复杂度为O(n^2)。
+//*/
+//
+//
 //#define _CRT_SECURE_NO_WARNINGS
 //#include <stdio.h>
 //#include <stdlib.h>
+// #include "linkStruct.h"//通过自创建头文件引入结构体，ctrl+鼠标左键点击即可查看
 //void bubbleSort(Link *h) {//冒泡排序
 //	int flag = 0;//排序标志，产生过变动就置为1
 //	int count = 0;//记录链表长度
@@ -53,3 +51,9 @@
 //	}
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

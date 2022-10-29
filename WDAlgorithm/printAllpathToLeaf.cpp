@@ -2,15 +2,11 @@
 //	编写算法打印从根节点到所有叶子结点的路径
 //	算法思想：利用递归和栈，采取深度优先遍历，遇到叶子结点时就打印栈中元素
 //*/
-//struct biTree {//树的结构体
-//	char data;
-//	biTree *lchild;
-//	biTree *rchild;
-//};
+//
 //
 //#include <stdio.h>
 //#include <stdlib.h>
-//
+//#include "biTreeStruct.h"//通过头文件加载二叉树结构体
 //void printAllpath(biTree *T, char *path, int len) {
 //	path[len] = T->data;
 //	if (!T->lchild && !T->rchild) {
@@ -38,3 +34,9 @@
 //	printAllpath(T, path, 0);
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

@@ -4,12 +4,10 @@
 //		首先我们需要分配一个节点空间为B作为头节点，然后设置一个flag，为0时认为是奇数，链给A，为1时认为是
 //		偶数，连给B
 //*/
-//struct Link {
-//	int data;
-//	Link *next;
-//};
+//
 //#include <stdio.h>
 //#include <stdlib.h>
+// #include "linkStruct.h"//通过自创建头文件引入结构体，ctrl+鼠标左键点击即可查看
 //void divide(Link *lb,Link *la) {
 //	int flag = 0;//做奇偶判定，因为奇数之后一定是偶数，偶数之后一定是奇数
 //	Link *l=la, *p = la->next,*rb=lb,*ra=l;
@@ -42,3 +40,9 @@
 //	printfNowLink(head);
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

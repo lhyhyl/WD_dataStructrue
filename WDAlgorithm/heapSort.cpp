@@ -11,7 +11,8 @@
 //}
 //void heapAdjust(int *arr,int k, int len) {//堆的调整,将传入的以k为根节点的子树调整为大根堆
 //	arr[0] = arr[k];//暂存arr[k]
-//	for (int i = 2 * k; i <= len;i*=2) {
+//	int i;
+//	for (i = 2 * k; i <= len;i*=2) {
 //		if (i < len&&arr[i] < arr[i + 1])//如果右孩子更大，i指向右孩子
 //			i++;
 //		if (arr[0] >= arr[i]) break;
@@ -23,8 +24,8 @@
 //	arr[k] = arr[0];
 //}
 //void buildMaxHeap(int *arr,int len) {//初始建堆
-//	for (int i = len / 2; i > 0;i--) {
-//		heapAdjust(arr,i,len);
+//	for (int j = len / 2; j > 0;j--) {
+//		heapAdjust(arr,j,len);
 //	}
 //}
 //void heapSort(int *arr, int len) {
@@ -36,7 +37,13 @@
 //	}
 //}
 //int main() {
-//	int arr[] = { 0,9,3,4,10 };
-//	heapSort(arr,4);
+//	int arr[] = { 0,9,45,78,65,17,32,53,87 };
+//	heapSort(arr,8);
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

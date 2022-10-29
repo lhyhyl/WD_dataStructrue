@@ -5,11 +5,8 @@
 	一个节点，如果他们再次相遇了，说明链表有环，如果p指针为NULL了，说明无环。同时我们需要记录p、q各走的步数，用以确定
 	环的入口点
 */
-//struct Link {
-//	int data;
-//	Link *next;
-//};
 //#include <stdio.h>
+//#include "linkStruct.h"//通过自创建头文件引入结构体，ctrl+鼠标左键点击即可查看
 //Link *isLoop(Link *h) {
 //	Link *fast = h, *slow = h;
 //	while (slow&&fast&&fast->next) {
@@ -48,3 +45,9 @@
 //	}
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

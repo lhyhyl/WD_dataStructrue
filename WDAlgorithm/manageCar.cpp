@@ -11,8 +11,8 @@
 //*/
 //#include <stdio.h>
 //#include <stdlib.h>
+//#include "queueStruct.h"//通过头文件加载队列结构体
 //#define MAXSIZE 20
-//struct Squeue {};
 //void manageCar(int* arrCar, int* arrArrange, Squeue* sq) {//这里用栈会有问题，所有车辆应该是遵循先到先上的原则，而栈的特性是先进后出，所以应该用队列更合适
 //	int i = 0, passengerCar = 0, j = 0;
 //	int c;//接收出队车
@@ -52,3 +52,9 @@
 //	}
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

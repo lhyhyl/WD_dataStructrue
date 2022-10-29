@@ -6,12 +6,9 @@
 //		这里还有另一种更加便捷的方法，只需对链表遍历一次，我们设立两个指针，最开始均指向首节点，然后让q先移动k个节点，之后p
 //		q同步移动，当q为NULL时，p所在的位置便是倒数第k个节点的位置
 //*/
-//struct Link {
-//	int data;
-//	Link *next;
-//};
 //#define _CRT_SECURE_NO_WARNINGS
 //#include <stdio.h>
+//#include "linkStruct.h"//通过自创建头文件引入结构体，ctrl+鼠标左键点击即可查看
 //int findTheReciprocalK(Link *h,int k) {//这是第一种解法
 //	Link *p = h->next;
 //	int count = 0,num;
@@ -61,3 +58,9 @@
 //
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

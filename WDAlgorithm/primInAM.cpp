@@ -2,14 +2,9 @@
 //	prim算法在用邻接矩阵方式存储的图中的实现
 //*/
 //#define _CRT_SECURE_NO_WARNINGS
-//#define MAXSIZE 100 //数组最大值
 //#include <stdio.h>
 //#include <stdlib.h>
-//struct AMGraph {
-//	int Vertex[MAXSIZE];
-//	int Edge[MAXSIZE][MAXSIZE];
-//	int numV, numE;//顶点、边数量
-//};
+//#include "AMGraphStruct.h"//通过头文件加载邻接矩阵结构体
 //
 //int getSum(AMGraph *G, int *prims) {//获得最小生成树的权值
 //	int sum = 0;
@@ -119,3 +114,9 @@
 //	prim2(&G, 0);
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

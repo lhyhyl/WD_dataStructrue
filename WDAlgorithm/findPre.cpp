@@ -6,14 +6,10 @@
 //		若f无左子女，则顺其前驱找双亲的双亲，一直找到双亲有左子女（此时左子女是p的前驱）。还有一种情况，若p是中序遍历的第
 //		一个节点，则节点p在中序和后序下均没有前驱。
 //*/
-//struct biTree {
-//	char data;
-//	biTree *lchild;
-//	biTree *rchild;
-//	int ltag, rtag;
-//};
 //#include <stdio.h>
 //#include <stdlib.h>
+// #include "biTreeStruct.h"//通过头文件加载二叉树结构体
+//
 //biTree *findPre(biTree *T,biTree *p) {//返回前驱结点
 //	biTree *f;
 //	if (p->rchild&&p->rtag==0) {//若该节点有右孩子，那么右子女是其前驱
@@ -39,8 +35,8 @@
 //	biTree *T = (biTree *)malloc(sizeof(struct biTree));
 //	biTree *create(biTree *,int);
 //	T = create(T,1);
-//	void inThread(biTree *,biTree *);
-//	inThread(T,NULL);//中序遍历建立线索
+//	void inThread(biTree *);
+//	inThread(T);//中序遍历建立线索
 //
 //	biTree *p = T->rchild->lchild,*pre=NULL;//手动指定一个节点
 //	pre=findPre(T,p);
@@ -52,3 +48,9 @@
 //	}
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

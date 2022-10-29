@@ -5,19 +5,10 @@
 //		这里唯一的难点就在于我们如何得知高度该加一了；我们可以设置一个标志num用来记录每一层入栈的节点个数，当我们出栈数
 //		达到该数值时也就意味着我们的高度该加一了
 //*/
-//struct biTree {
-//	char data;
-//	biTree *lchild;
-//	biTree *rchild;
-//};
-//struct Squeue {
-//	biTree *arr;
-//	int front, rear;
-//};
-//
 //#include <stdio.h>
 //#include <stdlib.h>
-//
+//#include "biTreeStruct.h"//通过头文件加载二叉树结构体
+//#include "queueStruct.h"//通过头文件加载队列结构体
 //int getHigh(biTree *T,Squeue *sq,int maxSize) {
 //	int curNum=0,nextNum=0,high=0;//记录一层有多少节点
 //	biTree *p = T;
@@ -63,3 +54,9 @@
 //	printf("该二叉树的高度为：%d",getHigh(T, sq, count));
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

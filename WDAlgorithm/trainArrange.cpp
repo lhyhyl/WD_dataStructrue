@@ -8,16 +8,14 @@
 //*/
 //#include <stdio.h>
 //#include <stdlib.h>
-//struct Stack {
-//	char *arr;
-//	int len;
-//	int top;
-//};
+//#include "stackStruct.h"//通过头文件加载栈结构体
+//
+//
 //void trainArrange(char *arrA,char *arrB,Stack *s) {//传入入口车厢，出口车厢，栈
 //	int i = 0, j = 0;
-//	char *c;//接收出栈硬座
+//	char c;//接收出栈硬座
 //	bool push(Stack *,char );
-//	char *top(Stack *);
+//	char top(Stack *);
 //	bool pop(Stack *);
 //	bool empty(Stack *);
 //	while (i<10) {
@@ -32,7 +30,7 @@
 //	while (!empty(s)) {//若栈中还有硬座，全部入B
 //		c = top(s);
 //		pop(s);
-//		arrB[j++] = *c;
+//		arrB[j++] = c;
 //	}
 //
 //}
@@ -49,3 +47,9 @@
 //	}
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

@@ -6,23 +6,8 @@
 //*/
 //#include <stdio.h>
 //#include <stdlib.h>
-//#define MAXSIZE 100
-//#define TYPE int
-//struct EdgeNode {//边表结点
-//	int index;//该边所指向的顶点的位置
-//	int weight;//权值
-//	EdgeNode* next;//下一个邻接边
-//};
+//#include "ALGraphStruct.h"//通过头文件加载邻接表结构体
 //
-//struct VertexNode {//顶点表节点
-//	char info;//顶点信息
-//	EdgeNode* firstEdge;//指向第一条依附该顶点的边的指针
-//};
-//
-//struct ALGraph {
-//	VertexNode adjlist[MAXSIZE];//顶点数组
-//	int numE, numV;//边数、顶点数
-//};
 //void DFS(ALGraph *G, int *visited, int &numV, int &numE, int index) {
 //	visited[index] = 1;//标记为已访问
 //	numV++;//顶点数加一
@@ -67,3 +52,9 @@
 //	}
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

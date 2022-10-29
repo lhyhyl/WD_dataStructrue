@@ -5,18 +5,10 @@
 //		的祖先存在栈中，因为栈顶是最近的祖先节点，所以我们可以一次往下寻找相同节点，第一次找到的相同节点便是最近公共
 //		祖先节点。
 //*/
-//struct biTree {
-//	char data;
-//	biTree *lchild;
-//	biTree *rchild;
-//};
-//struct Stack {
-//	biTree *arr;
-//	int len;
-//	int top;
-//};
 //#include <stdio.h>
 //#include <stdlib.h>
+//#include "biTreeStruct.h"//通过头文件加载二叉树结构体
+//#include "stackStruct.h"//通过头文件加载栈结构体
 //void findAncestor(Stack *s, biTree *m, biTree *x) {
 //	biTree *r = (biTree *)malloc(sizeof(biTree));
 //	bool empty(Stack *);
@@ -90,3 +82,9 @@
 //	printf("p q最近公共结点为值为：%c",r->data);
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

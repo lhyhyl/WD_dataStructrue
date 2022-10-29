@@ -4,12 +4,11 @@
 //		我们可以先进行排序，然后依次输出，并释放节点空间，我们也可以直接进行遍历，找到目前最小值进行输出，然后释放，注意不要断链
 //		我们这里采取第二种方式
 //*/
-//struct Link {
-//	int data;
-//	Link *next;
-//};
+//
 //#include <stdio.h>
 //#include <stdlib.h>
+// #include "linkStruct.h"//通过自创建头文件引入结构体，ctrl+鼠标左键点击即可查看
+//
 //void printAndDel(Link *h) {
 //	Link *pre = h, *p = h->next, *r,*min=h->next,*minPre=h;//为了操作的顺利进行，我们需要时刻保存节点的前驱与后继
 //	p = h->next;
@@ -41,3 +40,9 @@
 //	printfNowLink(head);
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

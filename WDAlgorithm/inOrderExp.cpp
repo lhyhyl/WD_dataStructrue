@@ -4,15 +4,10 @@
 //		题目已然说明我们要采取中序遍历，进而输出该表达式，那么需要注意的点便是我们的括号在哪里加，其中根节点处和叶子结点
 //		处不需要添加括号，其余情况在访问左子树前加左括号，访问右子树后添加右括号
 //*/
-//struct biTree {
-//	char data;
-//	biTree *lchild, *rchild;
-//};
 //#define _CRT_SECURE_NO_WARNINGS
 //#include <stdio.h>
 //#include <stdlib.h>
-//
-//
+//#include "biTreeStruct.h"//通过头文件加载二叉树结构体
 //void putInExp(biTree*T,int deep) {
 //	if (T==NULL) {
 //		return;
@@ -37,3 +32,9 @@
 //	putInExp(T,1);
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

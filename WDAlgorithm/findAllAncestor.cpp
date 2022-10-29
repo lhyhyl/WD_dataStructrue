@@ -3,18 +3,12 @@
 //	分析：
 //		这里我们采用后序遍历（非递归），因为在我们遇到x之前我们会把它的祖先节点全部入栈，当我们找到x时，再依次取出栈中元素
 //*/
-//struct biTree {
-//	char data;
-//	biTree *lchild;
-//	biTree *rchild;
-//};
-//struct Stack {
-//	biTree *arr;
-//	int len;
-//	int top;
-//};
+//
 //#include <stdio.h>
 //#include <stdlib.h>
+//#include "biTreeStruct.h"//通过头文件加载二叉树结构体
+//#include "stackStruct.h"//通过头文件加载栈结构体
+//
 //void findAllAncestor(biTree *T, Stack *s, char x) {
 //	biTree *p = T;
 //	biTree *r = (biTree *)malloc(sizeof(biTree));
@@ -71,3 +65,9 @@
 //	findAllAncestor(T, s, x);
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/

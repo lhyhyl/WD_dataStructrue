@@ -3,23 +3,11 @@
 //	分析：
 //		这道题和求高度那道题大同小异。我们仍然可以采取层次遍历，统计每一层的节点个数，找到宽度最大的那一层。
 //*/
-//struct biTree {
-//	char data;
-//	biTree *lchild;
-//	biTree *rchild;
-//
-//};
-//struct Link {
-//	char data;
-//	Link* next;
-//};
-//struct LinkQueue {//上次求高度采用的是顺序队列，这次采用链式队列，雨露均沾哈哈
-//	Link *front, *rear;
-//};
-//
 //#include <stdio.h>
 //#include <stdlib.h>
-//
+//#include "linkStruct.h"//通过自创建头文件引入结构体，ctrl+鼠标左键点击即可查看
+//#include "biTreeStruct.h"//通过头文件加载二叉树结构体
+//#include "queueStruct.h"//通过头文件加载队列结构体
 //int getWidth(biTree *b, LinkQueue *lq) {
 //	int oldNum = 0, curNum = 0, width = 0;
 //	bool enQueue(LinkQueue *lq, biTree *node);
@@ -65,3 +53,9 @@
 //	printf("该二叉树的宽度为：%d",getWidth(b, lq));
 //	return 0;
 //}
+/*
+
+B站：北街lhy
+配套视频链接：
+https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+*/
