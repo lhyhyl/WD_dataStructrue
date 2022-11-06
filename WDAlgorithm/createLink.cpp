@@ -3,7 +3,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "linkStruct.h"//通过头文件引入结构体，减少代码量
+#include <typeinfo>
+#include "basicNodeType.h"//通过头文件引入结构体，减少代码量
+//单链表
+struct Link {
+	BNODETYPE data;
+	Link* next;
+};
 Link* createLink(int num) {
 	int n, data;
 	char letter;
@@ -19,6 +25,7 @@ Link* createLink(int num) {
 		if (num==0) {//0代表创建整数型节点
 			scanf("%d", &data);
 			newP->data = data;
+
 		}
 		else {//1代表创建字符型节点
 			getchar();

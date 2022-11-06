@@ -1,8 +1,13 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdlib.h>
 #include <stdio.h>
-#include "linkStruct.h"//通过自创建头文件引入结构体，ctrl+鼠标左键点击即可查看
-
+#include "basicNodeType.h"//通过自创建头文件引入结构体，ctrl+鼠标左键点击即可查看
+//双链表
+struct DLink {
+	BNODETYPE data;
+	DLink* next;
+	DLink* pre;
+};
 DLink *createDouLoopLink() {
 	int n, data;
 	DLink*head = (DLink*)malloc(sizeof(DLink));

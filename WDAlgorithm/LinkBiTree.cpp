@@ -4,13 +4,12 @@
 #define _CRT_SECURE_NO_WARNINGS
 #define  N 100
 #define  MAXSIZE 100
-//#define  SQTYPE biTree*
 #include <stdio.h>
 #include <stdlib.h>
 #include "biTreeStruct.h"//Í¨¹ýÍ·ÎÄ¼þ¼ÓÔØ¶þ²æÊ÷½á¹¹Ìå
 #include "queueStruct.h"//Í¨¹ýÍ·ÎÄ¼þ¼ÓÔØ¶ÓÁÐ½á¹¹Ìå
 biTree* create(biTree* T, int type) {//ÕâÀïÎÒÃÇ²ÉÓÃÏÈÐò´´½¨Ò»¿Å¶þ²æÊ÷£¬typeÎª½ÚµãÀàÐÍ£º0´ú±íint 1´ú±íchar
-	BTYPE data;
+	BNODETYPE data;
 	type ? printf("ÇëÊäÈëµ±Ç°½ÚµãÖµ(char)£ºdata="):printf("ÇëÊäÈëµ±Ç°½ÚµãÖµ(int)£ºdata=");
 	type ? scanf("%c", &data) : scanf("%d", &data);
 	getchar();//¶ÁÈ¡¿Õ¸ñ¼ü
@@ -76,14 +75,14 @@ biTree* create(biTree* T, int type) {//ÕâÀïÎÒÃÇ²ÉÓÃÏÈÐò´´½¨Ò»¿Å¶þ²æÊ÷£¬typeÎª½Úµ
 void inOrder(biTree* T) {
 	if (T != NULL) {
 		inOrder(T->lchild);
-		sizeof(BTYPE)==1?printf("%c ", T->data):printf("%d ",T->data);
+		sizeof(BNODETYPE)==1?printf("%c ", T->data):printf("%d ",T->data);
 		inOrder(T->rchild);
 	}
 }
 //ÏÈÐòµÝ¹é±éÀú
 void preOrder(biTree* T) {
 	if (T != NULL) {
-		sizeof(BTYPE) == 1 ? printf("%c ", T->data) : printf("%d ", T->data);
+		sizeof(BNODETYPE) == 1 ? printf("%c ", T->data) : printf("%d ", T->data);
 		preOrder(T->lchild);
 		preOrder(T->rchild);
 	}
@@ -93,7 +92,7 @@ void postOrder(biTree* T) {
 	if (T != NULL) {
 		postOrder(T->lchild);
 		postOrder(T->rchild);
-		sizeof(BTYPE) == 1 ? printf("%c ", T->data) : printf("%d ", T->data);
+		sizeof(BNODETYPE) == 1 ? printf("%c ", T->data) : printf("%d ", T->data);
 	}
 }
 //Í³¼Æ½Úµã¸öÊý

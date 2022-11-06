@@ -6,7 +6,7 @@
 //*/
 //#include <stdio.h>
 //#include <stdlib.h>
-//#include "biTreeStruct.h"//通过头文件加载二叉树结构体
+////#include "biTreeStruct.h"//通过头文件加载二叉树结构体
 //#include "queueStruct.h"//通过头文件加载队列结构体
 //void levelOrder(biTree *T,Squeue *sq,int maxSize) {
 //	biTree *p = T;//工作指针
@@ -37,9 +37,9 @@
 //	levelOrder(T,sq,count);
 //	return 0;
 //}
-/*
-
-B站：北街lhy
-配套视频链接：
-https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
-*/
+///*
+//
+//B站：北街lhy
+//配套视频链接：
+//https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+//*/

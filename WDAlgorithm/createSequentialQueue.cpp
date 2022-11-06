@@ -9,7 +9,7 @@
 //创建队列
 Squeue *createQueue(int n) {
 	Squeue *sq = ( Squeue *)malloc(sizeof( Squeue));
-	sq->arr = (SQTYPE *)malloc(sizeof(SQTYPE)*n);//数组大小
+	sq->arr = (NODETYPE *)malloc(sizeof(NODETYPE)*n);//数组大小
 	sq->front = 0;
 	sq->rear = 0;
 	return sq;
@@ -27,7 +27,7 @@ int count(Squeue *sq, int maxSize) {
 	return (sq->rear - sq->front + maxSize) % maxSize;
 }
 //入队
-bool enQueue(Squeue *sq, SQTYPE data, int maxSize) {
+bool enQueue(Squeue *sq, NODETYPE data, int maxSize) {
 	if (isFull(sq, maxSize)) return false;
 	sq->arr[sq->rear] = data;
 	sq->rear = (sq->rear + 1) % maxSize;
@@ -35,7 +35,7 @@ bool enQueue(Squeue *sq, SQTYPE data, int maxSize) {
 }
 
 //出队
-bool deQueue(Squeue *sq, SQTYPE *data,int maxSize) {
+bool deQueue(Squeue *sq, NODETYPE*data,int maxSize) {
 	if (isEmpty(sq)) return false;
 	*data = sq->arr[sq->front];
 	sq->front = (sq->front + 1) % maxSize;

@@ -32,7 +32,7 @@ bool isEmpty(LinkQueue *lq) {
 	return lq->front == lq->rear;
 }
 //入队
-bool enQueue(LinkQueue *lq, LQTYPE data) {//队尾插入
+bool enQueue(LinkQueue *lq, NODETYPE data) {//队尾插入
 	Link *newd = (Link *)malloc(sizeof(Link));
 	 newd->data = data;
 	
@@ -42,7 +42,7 @@ bool enQueue(LinkQueue *lq, LQTYPE data) {//队尾插入
 	return true;
 }
 //出队
-bool deQueue(LinkQueue *lq, LQTYPE*data) {
+bool deQueue(LinkQueue *lq, NODETYPE*data) {
 	if (isEmpty(lq))return false;
 	Link *p = lq->front->next;//保存下一个节点
 	*data = lq->front->next->data;//取出队首节点值

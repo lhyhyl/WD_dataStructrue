@@ -7,25 +7,20 @@
 //#include <stdio.h>
 //#include <stdlib.h>
 //
-//void shellSort(int *arr, int len) {
+//void shellSort(int* arr, int len) {
 //	int d = len / 2;
-//	while (d >= 1) {
-//		for (int i = 0; i < d; i++) {//对于d增量内的每一个元素直接插入排序
-//			for (int j = i + d; j < len; j += d) {//按增量寻找是否存在逆序元素
-//				if (arr[j] < arr[j - d]) {//找到了逆序元素
-//					int numK = arr[j], k;//将该值暂存于numK
-//					for (k = j; numK < arr[k - d]; k -= d) {//按d增量向后移元素，判断依据是前面的元素都大于找到的逆序元素
-//						arr[k] = arr[k - d];
-//					}
-//					arr[k] = numK;//最后将逆序元素归位，而位置就是k
-//				}
-//
+//	while (d >= 1) {//步长大于一则继续循环
+//		for (int m = 0; m < d; m++) {//对于增量d内的每一个元素直接插入排序
+//			for (int i = m + d; i < len; i += d) {//同直接插入过程，不同的是元素位置相差d的为一组
+//				int j = i - d;
+//				int temp = arr[i];
+//				for (; arr[j] > temp && j >= 0; j -= d) //从后往前寻找待插入位置
+//					arr[j + d] = arr[j];//向后移动
+//				arr[j + d] = temp;
 //			}
 //		}
-//		d = d / 2;
+//		d /= 2;
 //	}
-//
-//
 //}
 //int main() {
 //	int arr[] = { 9,3,4,10,2,5,7,12,10,15 };
@@ -36,9 +31,9 @@
 //	}
 //	return 0;
 //}
-/*
-
-B站：北街lhy
-配套视频链接：
-https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
-*/
+///*
+//
+//B站：北街lhy
+//配套视频链接：
+//https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+//*/

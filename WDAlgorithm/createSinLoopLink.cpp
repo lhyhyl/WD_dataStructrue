@@ -1,11 +1,12 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdlib.h>
 #include <stdio.h>
-#include "linkStruct.h"
-//struct Link {
-//	int data;
-//	Link *next;
-//};
+#include "basicNodeType.h"
+//µ¥Á´±í
+struct Link {
+	BNODETYPE data;
+	Link* next;
+};
 Link *createSinLoopLink() {
 	int n, data;
 	Link *head = (Link *)malloc(sizeof(Link));

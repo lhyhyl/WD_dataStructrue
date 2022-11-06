@@ -5,7 +5,6 @@
 //*/
 //#include <stdio.h>
 //#include <stdlib.h>
-//#include "linkStruct.h"//通过自创建头文件引入结构体，ctrl+鼠标左键点击即可查看
 //#include "biTreeStruct.h"//通过头文件加载二叉树结构体
 //#include "queueStruct.h"//通过头文件加载队列结构体
 //int getWidth(biTree *b, LinkQueue *lq) {
@@ -53,9 +52,9 @@
 //	printf("该二叉树的宽度为：%d",getWidth(b, lq));
 //	return 0;
 //}
-/*
-
-B站：北街lhy
-配套视频链接：
-https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
-*/
+///*
+//
+//B站：北街lhy
+//配套视频链接：
+//https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+//*/

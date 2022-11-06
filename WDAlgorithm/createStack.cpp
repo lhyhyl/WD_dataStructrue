@@ -9,7 +9,7 @@
 //创建一个栈
 Stack *createStack(int size) {
 	Stack *stack = (Stack*)malloc(sizeof(Stack));//给栈分配空间
-	stack->arr = (STYPE *)malloc(sizeof(STYPE)*size);//给内存首地址分配空间，大小用户指定
+	stack->arr = (NODETYPE*)malloc(sizeof(NODETYPE)*size);//给内存首地址分配空间，大小用户指定
 	stack->len = size;//栈容量
 	stack->top = -1;//栈顶下标，当前无元素，故为-1
 	return stack;
@@ -23,7 +23,7 @@ bool empty(Stack *stack) {
 	return stack->top == -1;
 }
 //入栈
-bool push(Stack *stack, STYPE p) {
+bool push(Stack *stack, NODETYPE p) {
 	if (full(stack)) return false;
 	*(stack->arr + ++stack->top) = p;
 	return true;
@@ -38,7 +38,7 @@ bool pop(Stack *stack) {
 }
 
 //查看栈顶元素
-STYPE top(Stack *stack) {
+NODETYPE top(Stack *stack) {
 	if (empty(stack)) return NULL;
 	return *(stack->arr + stack->top);
 }
@@ -50,7 +50,7 @@ void destory(Stack *stack) {
 
 }
 //判断是否含有某个元素
-bool contain(Stack *stack, STYPE r) {
+bool contain(Stack *stack, NODETYPE r) {
 	if (empty(stack)) return false;
 	for (int i = stack->top; i >= 0; i--) {
 		if (r == *(stack->arr + i) ){//疯了，我居然把==写成了=

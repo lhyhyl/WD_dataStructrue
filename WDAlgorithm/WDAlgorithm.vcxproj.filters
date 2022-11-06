@@ -34,6 +34,9 @@
     <Filter Include="源文件\string">
       <UniqueIdentifier>{509f915b-9471-46aa-834f-80695c88eaad}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\typeDefine">
+      <UniqueIdentifier>{49cca89f-5e6c-4da7-a9b7-4481d0023d59}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="revertSquence.c">
@@ -417,9 +420,6 @@
     <ClCompile Include="simpleSelectSort.cpp">
       <Filter>源文件\sort</Filter>
     </ClCompile>
-    <ClCompile Include="TSMatrix.cpp">
-      <Filter>源文件\graph</Filter>
-    </ClCompile>
     <ClCompile Include="BalanceTree.cpp">
       <Filter>源文件\tree</Filter>
     </ClCompile>
@@ -428,6 +428,15 @@
     </ClCompile>
     <ClCompile Include="AMGraphStruct.h">
       <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hasSubTree.cpp">
+      <Filter>源文件\tree</Filter>
+    </ClCompile>
+    <ClCompile Include="TSMatrix.cpp">
+      <Filter>源文件\sequenceList</Filter>
+    </ClCompile>
+    <ClCompile Include="TSMatrix_ADD.cpp">
+      <Filter>源文件\sequenceList</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -442,6 +451,12 @@
     </ClInclude>
     <ClInclude Include="ALGraphStruct.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="basicNodeType.h">
+      <Filter>头文件\typeDefine</Filter>
+    </ClInclude>
+    <ClInclude Include="nodeType.h">
+      <Filter>头文件\typeDefine</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

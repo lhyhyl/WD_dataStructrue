@@ -15,7 +15,7 @@
 //	bool isEmpty(LinkQueue *);
 //	bool deQueue(LinkQueue *, char *);
 //
-//	bool push(Stack *, STYPE);
+//	bool push(Stack *, char);
 //	char top(Stack *);
 //	bool pop(Stack *);
 //	bool empty(Stack *);
@@ -73,9 +73,9 @@
 //	}
 //	return 0;
 //}
-/*
-
-B’æ£∫±±Ω÷lhy
-≈‰Ã◊ ”∆µ¡¥Ω”£∫
-https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
-*/
+///*
+//
+//B’æ£∫±±Ω÷lhy
+//≈‰Ã◊ ”∆µ¡¥Ω”£∫
+//https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+//*/

@@ -11,8 +11,8 @@
 //}
 //void heapAdjust(int *arr,int k, int len) {//堆的调整,将传入的以k为根节点的子树调整为大根堆
 //	arr[0] = arr[k];//暂存arr[k]
-//	int i;
-//	for (i = 2 * k; i <= len;i*=2) {
+//	int i = 2 * k;
+//	for (; i <= len; i = 2 * k) {
 //		if (i < len&&arr[i] < arr[i + 1])//如果右孩子更大，i指向右孩子
 //			i++;
 //		if (arr[0] >= arr[i]) break;
@@ -41,9 +41,9 @@
 //	heapSort(arr,8);
 //	return 0;
 //}
-/*
-
-B站：北街lhy
-配套视频链接：
-https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
-*/
+///*
+//
+//B站：北街lhy
+//配套视频链接：
+//https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+//*/

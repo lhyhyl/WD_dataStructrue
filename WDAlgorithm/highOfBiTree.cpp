@@ -44,9 +44,9 @@
 //	//创建二叉树、队列
 //	biTree *T=(biTree *)malloc(sizeof(biTree));
 //	Squeue *sq;
+//	Squeue *createQueue(int);
 //	biTree *create(biTree *,int);
 //	void nodeNum(biTree *,int *);
-//	Squeue *createQueue(int);
 //	T = create(T,1);
 //	nodeNum(T,&count);
 //	sq = createQueue(count);//创建一个大小为树节点个数的队列
@@ -54,9 +54,9 @@
 //	printf("该二叉树的高度为：%d",getHigh(T, sq, count));
 //	return 0;
 //}
-/*
-
-B站：北街lhy
-配套视频链接：
-https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
-*/
+///*
+//
+//B站：北街lhy
+//配套视频链接：
+//https://www.bilibili.com/video/BV1mh411Y75c?spm_id_from=333.999.0.0
+//*/
